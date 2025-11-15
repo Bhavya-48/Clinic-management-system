@@ -333,7 +333,7 @@ def staff_menu():
                 Date=input('Enter the Date (YYYY-MM-DD): ')
                 Time=input('Enter the Time (HH:MM:SS): ')
                 Stat=input('Enter the Current status: ')
-                cur.execute("UPDATE appointment SET PatientID={}, DoctorID={}, App_Date='{}',App_Time='{}',Status='{}' WHERE AppID={}".format(PatID,DocID,Date,Time,stat,AppID))
+                cur.execute("UPDATE appointment SET PatientID={}, DoctorID={}, App_Date='{}',App_Time='{}',Status='{}' WHERE AppID={}".format(PatID,DocID,Date,Time,Stat,AppID))
                 mycon.commit()
                 print("Updation successful")
                 cur.execute("SELECT * FROM doctors WHERE DoctorID={}".format(DocID,))
